@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Filmotion</string>
+    <string name="login_activity">login</string>
+    <string name="imagen_pelicula">Imagen de la película</string>
+</resources>

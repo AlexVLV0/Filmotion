@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_peliculas"
+        android:title="Mis Películas"
+        android:icon="@drawable/ic_movies" />
+
+    <item
+        android:id="@+id/nav_random"
+        android:title="Aleatoria"
+        android:icon="@drawable/ic_random" />
+
+    <item
+        android:id="@+id/nav_olvidadas"
+        android:title="Olvidadas"
+        android:icon="@drawable/ic_history" />
+
+    <item
+        android:id="@+id/nav_perfil"
+        android:title="Preferencias"
+        android:icon="@drawable/ic_settings" />
+
+</menu>
