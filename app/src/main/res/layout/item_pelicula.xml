@@ -1,52 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-
     <data></data>
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:elevation="4dp"
-        android:foreground="?attr/selectableItemBackground"
-        android:clickable="true"
-        android:focusable="true">
+        android:orientation="vertical"
+        android:padding="12dp">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/imagePortada"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/textTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp">
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingTop="8dp" />
 
-            <ImageView
-                android:id="@+id/imagePortada"
-                android:layout_width="80dp"
-                android:layout_height="120dp"
-                android:scaleType="centerCrop"
-                android:contentDescription="@string/imagen_pelicula" />
+        <TextView
+            android:id="@+id/textFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#666" />
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingStart="12dp">
+        <!-- NUEVO: Valoración en estrellas -->
+        <RatingBar
+            android:id="@+id/ratingBarValoracion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1.0"
+            android:isIndicator="true"
+            android:layout_marginTop="6dp" />
 
-                <TextView
-                    android:id="@+id/textTitulo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:maxLines="2" />
-
-                <TextView
-                    android:id="@+id/textFecha"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="14sp"
-                    android:textColor="#888" />
-            </LinearLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+        <!-- NUEVO: Emoji de emoción -->
+        <TextView
+            android:id="@+id/textEmocion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
 </layout>

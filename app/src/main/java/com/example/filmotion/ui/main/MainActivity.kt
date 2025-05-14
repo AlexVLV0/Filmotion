@@ -3,17 +3,15 @@ package com.example.filmotion.ui.main
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.example.filmotion.R
 import com.example.filmotion.databinding.ActivityMainBinding
 import com.example.filmotion.ui.login.LoginActivity
 import com.example.filmotion.ui.main.fragments.BusquedaFragment
 import com.example.filmotion.ui.main.fragments.PeliculasFragment
-import com.example.filmotion.ui.main.fragments.PerfilFragment
+import com.example.filmotion.ui.main.fragments.OpcionesFragment
 import com.example.filmotion.ui.main.fragments.RandomFragment
 import com.example.filmotion.ui.main.fragments.OlvidadasFragment
 import com.example.filmotion.utils.PreferencesManager
@@ -61,7 +59,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_peliculas -> openFragment(PeliculasFragment())
                 R.id.nav_random -> openFragment(RandomFragment())
                 R.id.nav_olvidadas -> openFragment(OlvidadasFragment())
-                R.id.nav_perfil -> openFragment(PerfilFragment())
+                R.id.nav_perfil -> openFragment(OpcionesFragment())
                 else -> false
             }
         }

@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-        <!-- Puedes agregar ViewModel o variables aquí -->
+        <!-- Aquí podrías añadir variables del ViewModel si lo deseas -->
     </data>
 
     <FrameLayout
@@ -10,12 +10,12 @@
         android:layout_height="match_parent"
         android:padding="16dp">
 
-        <!-- Aquí irá el RecyclerView con tus películas reseñadas -->
-        <TextView
-            android:id="@+id/textViewPeliculas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tus películas reseñadas aparecerán aquí" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPeliculas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"/>
 
     </FrameLayout>
 </layout>

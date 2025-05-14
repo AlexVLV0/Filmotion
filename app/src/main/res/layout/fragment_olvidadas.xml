@@ -1,18 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data />
 
-    <data>
-    </data>
-
-    <FrameLayout
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textViewOlvidadas"
+        <Button
+            android:id="@+id/btnRevelar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Películas olvidadas aparecerán aquí" />
-    </FrameLayout>
+            android:text="Revelar película olvidada" />
+
+        <TextView
+            android:id="@+id/textSinOlvidadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No hay películas reseñadas"
+            android:visibility="gone"
+            android:textColor="@android:color/darker_gray"
+            android:paddingTop="12dp"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/contenedorPelicula"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageOlvidada"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/textTituloOlvidada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingTop="8dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textFechaOlvidada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#888888" />
+        </LinearLayout>
+    </LinearLayout>
 </layout>

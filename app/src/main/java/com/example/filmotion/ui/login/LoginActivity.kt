@@ -68,6 +68,7 @@ class LoginActivity : AppCompatActivity() {
                         // Guardar token y email correctamente
                         val prefs = PreferencesManager(this@LoginActivity)
                         prefs.saveToken(loginResponse.token ?: "")
+                        prefs.saveUserId(loginResponse.user_id ?: -1)
                         Log.d("LoginActivity", "Token guardado: ${prefs.getToken()}")
 
                         prefs.saveEmail(loginResponse.email ?: "")

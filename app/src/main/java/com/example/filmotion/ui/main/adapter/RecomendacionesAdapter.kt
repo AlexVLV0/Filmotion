@@ -1,3 +1,4 @@
+// RecomendacionesAdapter.kt
 package com.example.filmotion.ui.main.adapter
 
 import android.view.LayoutInflater
@@ -7,29 +8,18 @@ import com.bumptech.glide.Glide
 import com.example.filmotion.databinding.ItemPeliculaBinding
 import com.example.filmotion.model.Pelicula
 
-class PeliculasAdapter(
+class RecomendacionesAdapter(
     private var peliculas: List<Pelicula>,
     private val onItemClick: (Pelicula) -> Unit
-) : RecyclerView.Adapter<PeliculasAdapter.PeliculaViewHolder>() {
+) : RecyclerView.Adapter<RecomendacionesAdapter.ViewHolder>() {
 
-    inner class PeliculaViewHolder(val binding: ItemPeliculaBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(val binding: ItemPeliculaBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(pelicula: Pelicula) {
             binding.textTitulo.text = pelicula.titulo
             binding.textFecha.text = pelicula.fechaLanzamiento
-
             Glide.with(binding.imagePortada.context)
                 .load(pelicula.imagenUrl)
                 .into(binding.imagePortada)
-
-            // Mostrar estrellas
-            binding.ratingBarValoracion.rating = (pelicula.puntuacion ?: 0).toFloat()
-
-            // Mostrar emoción
-            binding.textEmocion.text = when (pelicula.emocion) {
-                1 -> "😊"
-                0 -> "😢"
-                else -> ""
-            }
 
             binding.root.setOnClickListener {
                 onItemClick(pelicula)
@@ -37,22 +27,19 @@ class PeliculasAdapter(
         }
     }
 
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PeliculaViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemPeliculaBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return PeliculaViewHolder(binding)
+        return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: PeliculaViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(peliculas[position])
     }
 
     override fun getItemCount(): Int = peliculas.size
 
-    fun updateList(newList: List<Pelicula>) {
-        peliculas = newList
+    fun updateList(nuevaLista: List<Pelicula>) {
+        peliculas = nuevaLista
         notifyDataSetChanged()
     }
-
-    
 }

@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    private const val BASE_URL = "https://0977-157-88-196-230.ngrok-free.app/filmotion-api/"
+    private const val BASE_URL = "https://2c6e-157-88-196-152.ngrok-free.app/filmotion-api/"
 
     // Necesitarás un contexto si accedes a SharedPreferences
     fun create(context: Context): ApiService {

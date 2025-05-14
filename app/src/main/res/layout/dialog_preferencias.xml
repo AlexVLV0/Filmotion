@@ -1,0 +1,61 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Feliz -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuando me siento feliz, quiero ver:" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupFeliz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioFelizDeseaFeliz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Felices" />
+
+            <RadioButton
+                android:id="@+id/radioFelizDeseaTriste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tristes" />
+        </RadioGroup>
+
+        <!-- Triste -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuando me siento triste, quiero ver:"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupTriste"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioTristeDeseaFeliz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Felices" />
+
+            <RadioButton
+                android:id="@+id/radioTristeDeseaTriste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tristes" />
+        </RadioGroup>
+
+    </LinearLayout>
+</layout>

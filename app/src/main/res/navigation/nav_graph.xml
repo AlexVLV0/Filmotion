@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/perfilFragment"
-        android:name="com.example.filmotion.ui.main.fragments.PerfilFragment"
+        android:name="com.example.filmotion.ui.main.fragments.OpcionesFragment"
         android:label="Perfil" />
 
 </navigation>
